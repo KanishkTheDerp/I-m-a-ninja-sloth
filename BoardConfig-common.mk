@@ -17,6 +17,8 @@
 include build/make/target/board/BoardConfigMainlineCommon.mk
 include build/make/target/board/BoardConfigPixelCommon.mk
 
+BUILD_BROKEN_CLANG_PROPERTY := true
+
 TARGET_BOARD_PLATFORM := sdm845
 TARGET_BOARD_INFO_FILE := device/google/crosshatch/board-info.txt
 USES_DEVICE_GOOGLE_B1C1 := true
@@ -49,6 +51,7 @@ BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += usbcore.autosuspend=7
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/1d84000.ufshc
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
@@ -196,7 +199,7 @@ ifeq ($(PRODUCT_USE_QC_SPECIFIC_SYMLINKS), true)
 BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware_mnt:/firmware
 endif
 
-include device/google/crosshatch/sepolicy/crosshatch-sepolicy.mk
+# include device/google/crosshatch/sepolicy/crosshatch-sepolicy.mk
 
 TARGET_FS_CONFIG_GEN := device/google/crosshatch/config.fs
 

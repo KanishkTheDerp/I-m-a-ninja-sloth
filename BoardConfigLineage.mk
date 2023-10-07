@@ -39,8 +39,8 @@ BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 30720000
 BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 30720000
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/google/crosshatch/sepolicy-lineage/dynamic
-BOARD_SEPOLICY_DIRS += device/google/crosshatch/sepolicy-lineage/vendor
+# BOARD_SEPOLICY_DIRS += device/google/crosshatch/sepolicy-lineage/dynamic
+# BOARD_SEPOLICY_DIRS += device/google/crosshatch/sepolicy-lineage/vendor
 
 # Verified Boot
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
